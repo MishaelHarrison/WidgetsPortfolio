@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/widgets-portfolio/static/js/main.185d9f33.js",
-    "index.html": "/widgets-portfolio/index.html",
-    "main.185d9f33.js.map": "/widgets-portfolio/static/js/main.185d9f33.js.map"
+    "main.js": "/WidgetsPortfolio/static/js/main.185d9f33.js",
+    "index.html": "/WidgetsPortfolio/index.html",
+    "main.185d9f33.js.map": "/WidgetsPortfolio/static/js/main.185d9f33.js.map"
   },
   "entrypoints": [
     "static/js/main.185d9f33.js"
