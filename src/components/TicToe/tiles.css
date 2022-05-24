@@ -1,0 +1,52 @@
+.tile.O {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-bottom: 5px solid rgb(0,
+            0,
+            116);
+    border-right: 5px solid rgb(0,
+            0,
+            116);
+    border-top: 5px solid rgb(94,
+            94,
+            255);
+    border-left: 5px solid rgb(94,
+            94,
+            255);
+}
+
+.tile.X {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-bottom: 5px solid rgb(131, 0, 0);
+    border-right: 5px solid rgb(131, 0, 0);
+    border-top: 5px solid rgb(255, 79, 79);
+    border-left: 5px solid rgb(255, 79, 79);
+}
+
+.circle {
+    border: 10px solid black;
+    border-radius: 60px;
+    height: 60px;
+    width: 60px;
+    transform: translate(10px, 10px);
+}
+
+.cross:before,
+.cross:after {
+    position: absolute;
+    content: ' ';
+    height: 100px;
+    width: 10px;
+    background-color: black;
+}
+
+.cross:before {
+    transform: translate(45px) rotate(45deg);
+}
+
+.cross:after {
+    transform: translate(45px) rotate(-45deg);
+}

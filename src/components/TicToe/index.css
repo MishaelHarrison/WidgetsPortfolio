@@ -1,0 +1,18 @@
+.tic-toe{
+    height:390px;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 110px 110px;
+}
+
+.tile-shelf {
+    padding: 20px;
+    display: grid;
+    grid-auto-rows: 60px;
+}
+
+.animation{
+    z-index: 1000 !important;
+    position: relative;
+    height: 0;
+}

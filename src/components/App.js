@@ -1,7 +1,9 @@
 import React from "react";
 
+import TicToe from "./TicToe";
+
 const App = () => {
-  return <div>it works</div>;
+  return <TicToe />;
 };
 
 export default App;
