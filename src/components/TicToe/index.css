@@ -2,7 +2,7 @@
     height:390px;
     background-color: grey;
     display: grid;
-    grid-template-columns: 110px 110px;
+    grid-template-columns: 140px 140px 400px;
 }
 
 .tile-shelf {
@@ -15,4 +15,14 @@
     z-index: 1000 !important;
     position: relative;
     height: 0;
+}.grid-line-horizantal {
+    position: absolute;
+    background-color: black;
+    width: 360px;
+    height: 5px;
+}.grid-line-vertical {
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 360px;
 }

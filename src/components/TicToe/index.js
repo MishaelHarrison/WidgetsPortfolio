@@ -5,20 +5,21 @@ import "./tiles.css";
 import Tile from "./Tile";
 import TileStack from "./TileStack";
 import Animator from "./Animator";
+import Grid from "./Grid";
 
 const leftIn = (count, onCompletion) => {
   return {
     subject: <Tile type="O" layer="1000" />,
     begin: { x: 20, y: -40 + count * 60 },
-    end: { x: 140, y: 120 },
+    end: { x: 140, y: 130 },
     onCompletion: onCompletion,
   };
 };
 
 const Main = () => {
-  const [leftCount, setLeftCount] = useState(5);
+  const [leftCount, setLeftCount] = useState(4);
   const [animation, setAnimation] = useState(null);
-  const [leftActive, setLeftActive] = useState(false);
+  const [leftActive, setLeftActive] = useState(true);
   const [animateing, setAnimateing] = useState(false);
 
   const animate = () => {
@@ -39,11 +40,26 @@ const Main = () => {
       <Animator animation={animation} />
       <div className="tic-toe">
         <TileStack type="O" count={leftCount} />
-        {leftActive ? (
-          <div style={{ transform: "translate(30px, 120px)" }}>
-            <Tile type="O" />
-          </div>
-        ) : null}
+
+        <div style={{ transform: "translate(0, 130px)" }}>
+          {leftActive ? <Tile type="O" /> : null}
+        </div>
+
+        <div style={{ transform: "translate(0, 5px)" }}>
+          <Grid
+            content={[
+              <Tile type="O" />,
+              <Tile type="X" />,
+              <Tile type="O" />,
+              <Tile type="X" />,
+              <Tile type="O" />,
+              <Tile type="X" />,
+              <Tile type="O" />,
+              <Tile type="X" />,
+              <Tile type="O" />,
+            ]}
+          />
+        </div>
       </div>
     </div>
   );
