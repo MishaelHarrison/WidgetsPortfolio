@@ -9,8 +9,8 @@ const Animator = (props) => {
     <div>
       <style>
         {`@keyframes animation {
-          from { transform: translate(${begin.x}px, ${begin.y}px); }
-          to { transform: translate(${end.x}px, ${end.y}px); }}`}
+          from, 15% { transform: translate(${begin.x}px, ${begin.y}px); }
+          85%, to { transform: translate(${end.x}px, ${end.y}px); }}`}
       </style>
       <div
         className="animation"

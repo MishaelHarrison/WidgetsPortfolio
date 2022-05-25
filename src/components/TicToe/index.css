@@ -1,21 +1,32 @@
 .tic-toe{
     height:390px;
-    background-color: grey;
+    background-color: gray;
     display: grid;
     grid-template-columns: 140px 140px 400px;
 }
 
 .tile-shelf {
-    padding: 20px;
+    padding: 10px;
     display: grid;
     grid-auto-rows: 60px;
 }
 
-.animation{
+.animation, .cursor{
     z-index: 1000 !important;
     position: relative;
     height: 0;
-}.grid-line-horizantal {
+}
+
+.animation>div{
+    animation: annimationInner 0.75s;
+}
+
+.cursor>div {
+box-shadow: 3px 3px 2px black;
+transform: translate(-5px, -5px);
+}
+
+.grid-line-horizantal {
     position: absolute;
     background-color: black;
     width: 360px;
@@ -25,4 +36,9 @@
     background-color: black;
     width: 5px;
     height: 360px;
+}
+
+@keyframes annimationInner{
+    25%, 75% {box-shadow: 3px 3px 2px black;
+    transform: translate(-5px, -5px);}
 }

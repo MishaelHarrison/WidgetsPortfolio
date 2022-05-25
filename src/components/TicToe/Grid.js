@@ -1,21 +1,25 @@
 import React from "react";
+import Tile from "./Tile";
 
 const Grid = (props) => {
   const renderedContent = () => {
-    return props.content.map((x, i) => {
-      return (
-        <div
-          style={{
-            position: "absolute",
-            transform: `translate(${(i % 3) * 125}px, ${
-              Math.floor(i / 3) * 125
-            }px)`,
-          }}
-        >
-          {x}
-        </div>
-      );
-    });
+    return props.content
+      ? props.content.map((x, i) => {
+          return (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                transform: `translate(${(i % 3) * 125}px, ${
+                  Math.floor(i / 3) * 125
+                }px)`,
+              }}
+            >
+              {x ? <Tile type={x} /> : null}
+            </div>
+          );
+        })
+      : null;
   };
   return (
     <div>
